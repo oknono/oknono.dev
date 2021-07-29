@@ -1,94 +1,107 @@
+:root {
+    --color-bg: var(--color-rainbow-lime);
+    --color-container-bg: white;
+    --color-rainbow-red: rgb(255, 0, 0);
+    --color-rainbow-orange: rgb(255, 154, 0);
+    --color-rainbow-lime: rgb(208, 222, 33);
+    --color-rainbow-green: rgb(79, 220, 74);
+    --color-rainbow-aqua: rgb(63, 218, 216);
+    --color-rainbow-darkeraqua: rgb(47, 201, 226);
+    --color-rainbow-blue: rgb(28, 127, 238);
+    --color-rainbow-purple: rgb(95, 21, 242);
+    --color-rainbow-violet: rgb(186, 12, 248);
+    --color-rainbow-magenta: rgb(251, 7, 217);
+}
+
 body {
     font-family: 'Lexend Deca', sans-serif;
-    background-color: grey;
+    background-color: var(--color-bg);
     margin: 0;
 }
 
 .container {
-    background-color: white;
+    background-color: var(--color-container-bg);
     padding: 20px 40px;
     margin: auto;
     height: 100vh;
     max-width: 1024px;
 }
 
-header {
+.header {
     display: flex;
     flex-direction: column;
-    background-color: white;
+    background-color: var(--color-container-bg);
     align-items: center;
 }
 
 @media screen and (min-width: 700px) {
-    header {
+    .header {
         flex-direction: row;
         justify-content: space-between;
     }
 }
 
-.title {
+.header__title {
     font-family: 'Montserrat', sans-serif;
     font-size: 64px;
     text-transform: uppercase;
 }
 
 @media screen and (min-width: 1024px) {
-    .title {
+    .header__title {
         font-size: 96px;
     }
 }
 
-.title:hover .title_effect {
+.header__title:hover .header__title_effect {
     font-style: italic;
 }
 
-nav {
+.navigation {
     width: 100%;
 }
 
-nav ul {
+.navigation__list {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
-nav ul li {
+.navigation_item {
     list-style: none;
     font-size: 18px;
     cursor: pointer;
 }
 
 @media screen and (min-width: 700px) {
-    nav ul li {
+    .navigation_item {
         font-size: 24px;
     }
 }
 
-nav ul li.disabled {
-    color: grey;
-    cursor: default;
-}
-
-nav ul li.disabled:hover, nav ul li.disabled:focus {
-    text-decoration: none;
-}
-
-nav ul li:hover {
+.navigation_item:hover, .navigation_item.active {
     text-decoration-line: underline;
     text-decoration-thickness: 4px;
     text-underline-offset: 50%;
 }
 
-nav ul li:focus-visible, p a:focus-visible {
-    outline: hotpink 2px dotted;
-}
-
 .rainbow_divider {
     height: 8px;
-    background: linear-gradient( 90deg, rgba(255, 0, 0, 1) 0%, rgba(255, 154, 0, 1) 10%, rgba(208, 222, 33, 1) 20%, rgba(79, 220, 74, 1) 30%, rgba(63, 218, 216, 1) 40%, rgba(47, 201, 226, 1) 50%, rgba(28, 127, 238, 1) 60%, rgba(95, 21, 242, 1) 70%, rgba(186, 12, 248, 1) 80%, rgba(251, 7, 217, 1) 90%, rgba(255, 0, 0, 1) 100%);
+    background: linear-gradient( 90deg, 
+    var(--color-rainbow-red) 0%, 
+    var(--color-rainbow-orange) 10%, 
+    var(--color-rainbow-lime) 20%, 
+    var(--color-rainbow-green) 30%, 
+    var(--color-rainbow-aqua) 40%, 
+    var(--color-rainbow-darkeraqua) 50%, 
+    var(--color-rainbow-blue) 60%, 
+    var(--color-rainbow-purple) 70%, 
+    var(--color-rainbow-violet) 80%, 
+    var(--color-rainbow-magenta) 90%, 
+    var(--color-rainbow-red) 100%);
 }
 
 main {
-    background-color: white;
+    background-color: var(--color-container-bg);
     height: auto;
     padding: 20px 0;
     font-size: 18px;
@@ -96,7 +109,7 @@ main {
 }
 
 p a {
-    color: rgba(95, 21, 242, 1);
+    color: var(--color-rainbow-purple);
     font-style: bold;
     text-decoration-line: underline;
     text-decoration-thickness: 2px;
@@ -104,7 +117,7 @@ p a {
 }
 
 p a:hover, p a:focus {
-    color: hotpink;
+    color: var(--color-rainbow-magenta);
     text-decoration-style: wavy;
-    text-decoration-color: hotpink;
+    text-decoration-color: var(--color-rainbow-magenta);
 }
