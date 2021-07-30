@@ -1,5 +1,5 @@
 :root {
-    --color-bg: var(--color-rainbow-lime);
+    --color-bg: #A0A0A0;
     --color-container-bg: white;
     --color-rainbow-red: rgb(255, 0, 0);
     --color-rainbow-orange: rgb(255, 154, 0);
@@ -58,12 +58,16 @@ body {
 }
 
 .navigation {
-    width: 100%;
+    /* width: 100%; */
+    width: 50%;
 }
 
 .navigation__list {
     display: flex;
+    flex-direction: row;    
+    align-items: center;
     justify-content: space-evenly;
+    padding: 0 0 0.5rem 0;
 }
 
 .navigation_item {
@@ -72,15 +76,15 @@ body {
     cursor: pointer;
 }
 
-.navigation_item a {
-    text-decoration: none;
-    color: inherit;
-}
-
 @media screen and (min-width: 700px) {
     .navigation_item {
         font-size: 24px;
     }
+}
+
+.navigation_item a {
+    text-decoration: none;
+    color: inherit;
 }
 
 .navigation_item:hover a, .navigation_item.active a {
