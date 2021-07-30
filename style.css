@@ -74,7 +74,7 @@ body {
 
 .navigation_item a {
     text-decoration: none;
-    color: inherit
+    color: inherit;
 }
 
 @media screen and (min-width: 700px) {
