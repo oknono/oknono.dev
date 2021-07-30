@@ -54,12 +54,11 @@ body {
     }
 }
 
-.header__title:hover .header__title_effect {
+.header__title_effect {
     font-style: italic;
 }
 
 .navigation {
-    /* width: 100%; */
     width: 50%;
 }
 
