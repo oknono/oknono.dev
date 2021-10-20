@@ -17,7 +17,7 @@ body {
     font-family: 'Lexend Deca', sans-serif;
     background-color: var(--color-bg);
     margin: 0;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .container {
@@ -74,6 +74,7 @@ body {
     list-style: none;
     font-size: 18px;
     cursor: pointer;
+    padding: 0 1em;
 }
 
 @media screen and (min-width: 700px) {
